@@ -1,0 +1,14 @@
+module all_in_one(y1, y2, y3, y4, y5, y6, a, b, c,sum,carry);
+input a, b, c;
+output y, y1, y2, y3, y4, y5, y6,sum,carry;
+wire y1, y2, y3, y4, y5, y6;
+and(y1, a, b);  //AND gate
+or(y2, a, b);   //or gate
+not(y3, c);     //not gate
+nand(y4, a, b); //nand gate
+nor(y5, a, b);  //nor gate
+xnor(y6, a, b); //xnor gate 
+assign sum=a^b;   //sum for half adder
+assign carry=a&b;  //carry for half adder
+
+endmodule
