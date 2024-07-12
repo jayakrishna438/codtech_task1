@@ -1,13 +1,13 @@
-module all_in_one(y1, y2, y3, y4, y5, y6, a, b, c,s1,c1);
-input a, b, c;
-output y, y1, y2, y3, y4, y5, y6,s1,s2,c1,c2;
-wire y1, y2, y3, y4, y5, y6;
-and(y1, a, b);  //AND gate
-or(y2, a, b);   //or gate
-not(y3, c);     //not gate
-nand(y4, a, b); //nand gate
-nor(y5, a, b);  //nor gate
-xnor(y6, a, b); //xnor gate 
+module all_in_one(y1,  y2,  y3,  y4,  y5,  y6,  a,  b,  c, s1, c1, s2, c2);
+input a,  b,  c;
+output y1,  y2,  y3,  y4,  y5,  y6, s1, c1, s2, c2;
+wire y1,  y2,  y3,  y4,  y5,  y6, s1, c1, s2, c2;
+and(y1,  a,  b);  //AND gate
+or(y2,  a,  b);   //or gate
+not(y3,  c);     //not gate
+nand(y4,  a,  b); //nand gate
+nor(y5,  a,  b);  //nor gate
+xnor(y6,  a,  b); //xnor gate 
 assign s1=a^b;   //sum for half adder
 assign c1=a&b;  //carry for half adder
 assign s2=a^b^c;  //sum for full adder
